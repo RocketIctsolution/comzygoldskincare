@@ -1,0 +1,9 @@
+{
+  "name": "comzygold-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Paystack webhook verification for Comzygold Skincare — deployed as a Vercel Serverless Function",
+  "dependencies": {
+    "firebase-admin": "^12.1.0"
+  }
+}

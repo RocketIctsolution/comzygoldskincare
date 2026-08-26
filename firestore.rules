@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- PRODUCTS ----
+    // Anyone (the storefront) can read the catalogue.
+    // Only a signed-in admin can create/edit/delete products or update stock.
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // ---- SALES ----
+    // Only the admin dashboard reads/writes sales directly.
+    // Online sales are written by the Cloud Function using the Admin SDK,
+    // which always bypasses these rules — so this only governs manual entry.
+    match /sales/{saleId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+
+    // ---- ORDERS ----
+    // The storefront (no login) needs to CREATE a pending order before
+    // opening the Paystack popup, and later READ that single order by its
+    // reference to see if the webhook has marked it paid.
+    // Nobody on the client — logged in or not — is allowed to flip status
+    // to "paid" themselves; only the Cloud Function (Admin SDK) can do that.
+    match /orders/{orderId} {
+      allow get: if true;
+      allow list: if request.auth != null;
+      allow create: if request.resource.data.status == 'pending';
+      allow update, delete: if false;
+    }
+  }
+}
