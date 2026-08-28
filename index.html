@@ -234,33 +234,186 @@
     <a href="#shop" class="btn btn-solid">Shop Now</a>
     <a href="#consult" class="btn btn-outline">Book a Consultation</a>
   </div>
-</div>
-  <section id="consult">
-  <table border="0" cellpadding="20" cellspacing="0" width="100%" bgcolor="#1f242d">
-    <tr>
-      <td align="center" valign="middle">
-        
-        <table border="1" cellpadding="12" cellspacing="0" bgcolor="#2d3748">
-          <tr>
-            <td align="center">
-              
-              <!-- CEO Photo -->
-              <img src="b30ce6ab-1290-4796-b571-b4627b9b8a0d.jpg" alt="CEO Photo" width="380" height="480" />
-              
-              <br /><br />
-              
-              <!-- Round Green Hover Name Button -->
-              <a href="#" onmouseover="this.style.backgroundColor='#10b981'; this.style.borderColor='#10b981';" onmouseout="this.style.backgroundColor='#ffffff'; this.style.borderColor='#cccccc';" style="display: inline-block; padding: 10px 25px; background-color: #ffffff; color: #000000; border: 2px solid #cccccc; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
-                CEO Name
-              </a>
+</div><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComzyGold Skincare - Founder Section</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-            </td>
-          </tr>
-        </table>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f9f5; /* Subtle organic green tint */
+      color: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+    }
 
-      </td>
-    </tr>
-  </table>
+    /* Founder Section Card */
+    .founder-hero {
+      max-width: 1050px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 1.5rem;
+      padding: 3.5rem 3rem;
+      border: 1px solid #e1efe4;
+      box-shadow: 0 15px 35px rgba(0, 180, 50, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    @media (min-width: 800px) {
+      .founder-hero {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    /* Founder Image & Meta Info */
+    .founder-profile {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 4 / 5;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      border: 3px solid #00b432; /* Vibrant Brand Organic Green */
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    .founder-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #111111; /* Pure Black from logo */
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .founder-title {
+      font-size: 0.9rem;
+      color: #00b432; /* Brand Green */
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* Quote Content */
+    .founder-content {
+      flex: 1.4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .quote-icon {
+      font-size: 6rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+      color: #00b432;
+      opacity: 0.15;
+      position: absolute;
+      top: -3.5rem;
+      left: -0.5rem;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .brand-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      color: #00b432;
+      margin-bottom: 1rem;
+      z-index: 1;
+    }
+
+    .quote-text {
+      position: relative;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: #222222;
+      font-weight: 400;
+      font-style: italic;
+      z-index: 1;
+      margin-bottom: 1.75rem;
+    }
+
+    .quote-text strong {
+      color: #111111;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .green-accent {
+      width: 60px;
+      height: 4px;
+      background-color: #00b432;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="founder-hero">
+    <!-- Profile Image & Meta -->
+    <div class="founder-profile">
+      <div class="image-wrapper">
+        <img src="b30ce6ab-1290-4796-b571-b4627b9b8a0d.jpg" alt="Tony Comfort - Founder & CEO of ComzyGold Skincare" />
+      </div>
+      <div class="founder-meta">
+        <h3 class="founder-name">Tony Comfort</h3>
+        <p class="founder-title">Founder & CEO</p>
+      </div>
+    </div>
+
+    <!-- Quote Content -->
+    <div class="founder-content">
+      <span class="quote-icon" aria-hidden="true">&ldquo;</span>
+      <span class="brand-tag">ComzyGold Skincare & Spa</span>
+      <blockquote class="quote-text">
+        Healthy, glowing skin is not a luxury reserved for a few—it is a reflection of self-care, natural harmony, and confidence. <strong>We blend rich, plant-based formulations with professional spa techniques to reveal your skin's true radiance.</strong>
+      </blockquote>
+      <div class="green-accent"></div>
+    </div>
+  </section>
+
+</body>
+</html>
 </section>
       <div class="founder-copy">
         <span class="eyebrow">How to shop from us</span>
